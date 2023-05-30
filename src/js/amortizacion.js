@@ -7,18 +7,18 @@ var aboInteres;
 var amortizacion;
 var plazo;
 
-$(function(){
+$(function () {
 
 });
 
-function calcular(){
+function calcular() {
 	plazo = $("#plazo").val();
-	interes  = $("#tasa").val();
+	interes = $("#tasa").val();
 	//interes = interes/12;
 	tasa = (parseFloat(interes));
 	monto = $("#monto").val();
 	saldo = monto;
-	
+
 
 	tipo_i = document.getElementById("tipo_i").value;
 	tipo_p = document.getElementById("tipo_p").value;
@@ -142,15 +142,15 @@ function conversion(interes, ele1, ele2) {
 }
 
 function calcularCuota() {
-	k =  ( 1 - Math.pow((1 + tasa), (plazo*-1))  ) /  tasa;
+	k = (1 - Math.pow((1 + tasa), (plazo * -1))) / tasa;
 	cuota = monto / k;
 	cuota = cuota.toFixed(2);
 }
 
-function generarTabla(){
+function generarTabla() {
 	html = "";
-	while(Math.round(saldo) > 0){
-		if(periodo == 0) cuotaAux = 0;
+	while (Math.round(saldo) > 0) {
+		if (periodo == 0) cuotaAux = 0;
 		else cuotaAux = cuota;
 		html += `<tr>
 					<td>${periodo}</td>
@@ -159,13 +159,13 @@ function generarTabla(){
 					<td>${new Intl.NumberFormat().format(cuotaAux)}</td>
 					<td>${new Intl.NumberFormat().format(amortizacion)}</td>
 					
-				</tr>`;	
-		
+				</tr>`;
+
 		periodo++;
-		aboInteres = Decimal(saldo*tasa);
+		aboInteres = Decimal(saldo * tasa);
 		amortizacion = Decimal(cuota - aboInteres);
 		saldo = Decimal(saldo - amortizacion);
-		
+
 	}
 	html += `<tr>
 					<td>${periodo}</td>
@@ -174,12 +174,12 @@ function generarTabla(){
 					<td>${new Intl.NumberFormat().format(cuota)}</td>
 					<td>${new Intl.NumberFormat().format(amortizacion)}</td>
 					
-				</tr>`;	
+				</tr>`;
 	$("#table-c").html(html);
 	mensaje();
 }
 
-function mensaje(){
+function mensaje() {
 	html = `<div class="alert alert-success alert-dismissible fade show" role="alert">
 				Se cancelarán ${periodo} cuotas, cada una por un valor de $ ${new Intl.NumberFormat().format(cuota)}.
 				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -187,11 +187,11 @@ function mensaje(){
 	$("#mensaje").html(html);
 }
 
-function Decimal(val){
+function Decimal(val) {
 	return parseFloat(val).toFixed(3);
 }
 
-function construct(){
+function construct() {
 	periodo = 0;
 	aboInteres = 0;
 	amortizacion = 0;

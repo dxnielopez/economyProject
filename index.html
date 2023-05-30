@@ -5,123 +5,94 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
-  <title>Economia</title>
-
-  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sidebars/">
-
+  <title>Proyecto final Ing. Económica</title>
 
   <!-- Bootstrap core CSS -->
   <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <style>
-    .bd-placeholder-img {
-      font-size: 2.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none;
-    }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-  </style>
-
-
-  <!-- Custom styles for this template -->
-  <link href="./assets/sidebars.css" rel="stylesheet">
+  
+  <!--My CSS-->
+  <link href="src/css/index.css" rel="stylesheet">
 </head>
 
-<body>
-
-  <main>
-
-    <div class="flex-shrink-0 p-3 bg-#FCE89D" style="width: 100%;">
-      <a align="center" id="encabezado" href="#" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
-        <svg class="bi me-2" width="30" height="24">
-          <use xlink:href="" />
-        </svg>
-        <span  class="fs-5 fw-semibold">TRABAJO FINAL INGENIERIA ECONOMICA</span>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img width="28" height="28" src="https://img.icons8.com/fluency/96/stocks-growth.png" alt="stocks-growth" />
+        Ing. Económica
       </a>
-      <ul class="list-group list-group-horizontal-lg">
-        <li class="list-group-item">
-          <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-            data-bs-target="#dashboard1-collapse" aria-expanded="false">
-            Conversión de Tasas
-          </button>
-          <div class="collapse" id="dashboard1-collapse">
-            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li><a href="./src/nominal_efectiva.html" class="link-dark rounded">Nominal a Efectiva</a></li>
-              <li><a href="./src/efectiva_nominal.html" class="link-dark rounded">Efectiva a Nominal</a></li>
-              <li><a href="./src/efectivas.html" class="link-dark rounded">Efectivas</a></li>
-              <li><a href="./src/nominales.html" class="link-dark rounded">Nominales</a></li>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarRP" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Reparto proporcional
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarRP">
+              <li><a class="dropdown-item" href="src/rpds.html">Reparto proporcional directo simple</a></li>
+              <li><a class="dropdown-item" href="src/rpdc.html">Reparto proporcional directo compuesto</a></li>
+              <li><a class="dropdown-item" href="src/rpis.html">Reparto proporcional inverso simple</a></li>
+              <li><a class="dropdown-item" href="src/rpic.html">Reparto proporcional inverso compuesto</a></li>
+              <li><a class="dropdown-item" href="src/rpm.html">Reparto proporcional mixto</a></li>
             </ul>
-          </div>
-        </li>
-        <li class="list-group-item">
-          <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-            data-bs-target="#dashboard-collapse" aria-expanded="false">
-            Interes Compuesto
-          </button>
-          <div class="collapse" id="dashboard-collapse">
-            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li><a href="./src/interesCompuesto.html" class="link-dark rounded">Calculadora Interes Compuesto</a></li>
+          </li>
+  
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarI" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Interes
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarI">
+              <li><a class="dropdown-item" href="src/interesSimple.html">Interes simple</a></li>
+              <li><a class="dropdown-item" href="src/interesCompuesto.html">Interes compuesto</a></li>
             </ul>
-          </div>
-        </li>
-      <li class="list-group-item ">
-        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-          data-bs-target="#orders-collapse" aria-expanded="false">
-          Anualidades
-        </button>
-        <div class="collapse" id="orders-collapse">
-          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-            <li><a href="src/amortizacion.html" class="link-dark rounded">Amortizacion</a></li>
-            <li><a href="src/capitalizacion.html" class="link-dark rounded">Capitalizacion</a></li>
-          </ul>
-        </div>
-      </li>
-        <li class="list-group-item">
-          <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-            data-bs-target="#home1-collapse" aria-expanded="false">
-            Reparto Proporcional
-          </button>
-          <div class="collapse" id="home1-collapse">
-            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li><a href="./src/reparto_proporcional.html" class="link-dark rounded">Reparto Proporcional Directo Simple</a></li>
-              <li><a href="./src/rpdc.html" class="link-dark rounded">Reparto Proporcional Directo Compuesto</a></li>
-              <li><a href="./src/rpis.html" class="link-dark rounded">Reparto Proporcional Inverso Simple</a></li>
+          </li>
+  
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarCT" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Conversión de tasas
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarCT">
+              <li><a class="dropdown-item" href="src/nominalEfectiva.html">Nominal a Efectiva</a></li>
+              <li><a class="dropdown-item" href="src/efectivaNominal.html">Evectiva a Nominal</a></li>
+              <li><a class="dropdown-item" href="src/efectivas.html">Evectivas</a></li>
+              <li><a class="dropdown-item" href="src/nominales.html">Nominales</a></li>
             </ul>
-          </div>
-        </li>
-        
-        <li class="list-group-item">
-          <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-            data-bs-target="#home-collapse" aria-expanded="false">
-            Interes Simple
-          </button>
-          <div class="collapse" id="home-collapse">
-            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li><a href="./src/Interes_simple.html" class="link-dark rounded">Interes Simple</a></li>
-              <li><a href="./src/ism.html" class="link-dark rounded">Interes Simple Con Monto</a></li>
+          </li>
+  
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarA" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Anualidades
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarA">
+              <li><a class="dropdown-item" href="src/amortizacion.html">Amortización</a></li>
+              <li><a class="dropdown-item" href="src/capitalizacion.html">Capitalización</a></li>
             </ul>
-          </div>
-        </li>
-        <li class="border-top my-3"></li>
-      </ul>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
+</header>
 
-    <!--<div class="b-example-divider"></div>-->
-   
+<body>
+  <div class="container" style="background-color: black;">
+    <div class="row">
+      <div class="col-md-12 d-flex justify-content-center">
+      </div>
+    </div>
+  </div>
 
-  </main>
-</div>
-<div id="prueba"></div>
-
-  <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./assets/sidebars.js"></script>
 </body>
+
+<footer class="mt-3 d-flex justify-content-center">
+  <p class="text-white">&copy; Copyright 2023. Alex Perez, Daniel López, Maicol Moreno y Miguel Bonilla | Bogotá D.C - Colombia</p>
+</footer>
 
 </html>

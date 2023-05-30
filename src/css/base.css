@@ -1,0 +1,15 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    min-height: 80% !important;
+}
+
+footer {
+    background-color: black;
+}

@@ -1,183 +1,160 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <title>Economia</title>
-  <script src="js/jquery-3.6.0.min.js"></script>
-  <script src="js/nominales.js"></script>
-  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sidebars/">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversión de tasas: Nominal a Nominal</title>
 
-
-  <!-- Bootstrap core CSS -->
-  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none;
-    }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-  </style>
-
-
-  <!-- Custom styles for this template -->
-  <link href="../assets/sidebars.css" rel="stylesheet">
+  <!--Bootstrap CSS-->
+  <link rel="stylesheet" href="../assets/dist/css/bootstrap.min.css">
+  <!--Base CSS-->
+  <link rel="stylesheet" href="./css/base.css">
 </head>
 
-<body>
-
-  <main>
-
-    <div class="flex-shrink-0 p-3 bg-#CBF3FD shadow" style="width: 100%;">
-      <a href="../index.html" id="encabezado"
-        class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
-        <svg class="bi me-2" width="30" height="24">
-          <use xlink:href="" />
-        </svg>
-        <span class="fs-5 fw-semibold">TRABAJO FINAL INGENIERIA ECONOMICA</span>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html">
+        <img width="28" height="28" src="https://img.icons8.com/fluency/96/stocks-growth.png" alt="stocks-growth" />
+        Ing. Económica
       </a>
-      <ul class="list-group list-group-horizontal-lg">
-        <li class="list-group-item">
-          <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-            data-bs-target="#dashboard1-collapse" aria-expanded="false">
-            Conversión de Tasas
-          </button>
-          <div class="collapse" id="dashboard1-collapse">
-            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li><a href="nominal_efectiva.html" class="link-dark rounded">Nominal a Efectiva</a></li>
-              <li><a href="efectiva_nominal.html" class="link-dark rounded">Efectiva a Nominal</a></li>
-              <li><a href="efectivas.html" class="link-dark rounded">Efectivas</a></li>
-              <li><a href="nominales.html" class="link-dark rounded">Nominales</a></li>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarRP" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Reparto proporcional
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarRP">
+              <li><a class="dropdown-item" href="rpds.html">Reparto proporcional directo simple</a></li>
+              <li><a class="dropdown-item" href="rpdc.html">Reparto proporcional directo compuesto</a></li>
+              <li><a class="dropdown-item" href="rpis.html">Reparto proporcional inverso simple</a></li>
+              <li><a class="dropdown-item" href="rpic.html">Reparto proporcional inverso compuesto</a></li>
+              <li><a class="dropdown-item" href="rpm.html">Reparto proporcional mixto</a></li>
             </ul>
-          </div>
-        </li>
-        <li class="list-group-item">
-          <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-            data-bs-target="#orders-collapse" aria-expanded="false">
-            Anualidades
-          </button>
-          <div class="collapse" id="orders-collapse">
-            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li><a href="amortizacion.html" class="link-dark rounded">Amortizacion</a></li>
-              <li><a href="capitalizacion.html" class="link-dark rounded">Capitalizacion</a></li>
-            </ul>
-          </div>
-        </li>
-        <li class="list-group-item">
-          <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-            data-bs-target="#home1-collapse" aria-expanded="false">
-            Reparto Proporcional
-          </button>
-          <div class="collapse" id="home1-collapse">
-            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li><a href="reparto_proporcional.html" class="link-dark rounded">Reparto Proporcional Directo Simple</a></li>
-              <li><a href="rpdc.html" class="link-dark rounded">Reparto Proporcional Directo Compuesto</a></li>
-              <li><a href="rpis.html" class="link-dark rounded">Reparto Proporcional Inverso Simple</a></li>
-            </ul>
-          </div>
-        </li>
-        
-        <li class="list-group-item">
-          <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-            data-bs-target="#home-collapse" aria-expanded="false">
-            Interes Simple
-          </button>
-          <div class="collapse" id="home-collapse">
-            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li><a href="Interes_simple.html" class="link-dark rounded">Interes Simple</a></li>
-              <li><a href="ism.html" class="link-dark rounded">Interes Simple Con Monto</a></li>
-            </ul>
-          </div>
-        </li>
-        <li class="list-group-item">
-          <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-            data-bs-target="#dashboard-collapse" aria-expanded="false">
-            Interes Compuesto
-          </button>
-          <div class="collapse" id="dashboard-collapse">
-            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li><a href="interesCompuesto.html" class="link-dark rounded">Calculadora Interes Compuesto</a></li>
-            </ul>
-          </div>
-        </li>
-        <li class="border-top my-3"></li>
-      </ul>
-    </div>
+          </li>
 
-    <!--<div class="b-example-divider"></div>-->
-    
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarI" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Interes
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarI">
+              <li><a class="dropdown-item" href="interesSimple.html">Interes simple</a></li>
+              <li><a class="dropdown-item" href="interesCompuesto.html">Interes compuesto</a></li>
+            </ul>
+          </li>
 
-  </main>
-  <div align="center" class="w-100 p-3" style="overflow-y: auto;">
-    <!-- contenido principal -->
-    <div class="w-100 text-center">
-      <h4>Nominales</h4>
-    </div>
-    <div class="pb-1">
-        <label>Ingrese Interes: </label>
-        <input type="number" id="tasaN1" placeholder="%%%">
-    </div>
-    <div class="pb-1">
-      Tipo de tasa
-      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="tipo_c" id="periodoN1">
-        <option value="seleccione">Periodicidad</option>
-        <option value="M">Mensual</option>
-        <option value="B">Bimestral</option>
-        <option value="T">Trimestral</option>
-        <option value="C">Cuatrimestral</option>
-        <option value="S">Semestral</option>
-        <option value="A">Anual</option>
-      </select>
-    </div>
-    <div class="pb-1">
-        <input class="form-check-input" type="checkbox" value="" id="nominalA1">
-        <label class="form-check-label" for="nominalA">
-            Anticipada
-        </label>
-    </div>
-    <div class="pb-1">
-        Tipo de tasa
-        <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="tipo_c" id="periodoN2">
-          <option value="seleccione">Periodicidad</option>
-          <option value="M">Mensual</option>
-          <option value="B">Bimestral</option>
-          <option value="T">Trimestral</option>
-          <option value="C">Cuatrimestral</option>
-          <option value="S">Semestral</option>
-          <option value="A">Anual</option>
-        </select>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="navbarCT" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Conversión de tasas
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarCT">
+              <li><a class="dropdown-item" href="nominalEfectiva.html">Nominal a Efectiva</a></li>
+              <li><a class="dropdown-item" href="efectivaNominal.html">Evectiva a Nominal</a></li>
+              <li><a class="dropdown-item" href="efectivas.html">Evectivas</a></li>
+              <li><a class="dropdown-item" href="nominales.html">Nominales</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarA" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Anualidades
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarA">
+              <li><a class="dropdown-item" href="amortizacion.html">Amortización</a></li>
+              <li><a class="dropdown-item" href="capitalizacion.html">Capitalización</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
-      <div class="pb-1">
-          <input class="form-check-input" type="checkbox" value="" id="nominalA2">
-          <label class="form-check-label" for="nominalA2">
+    </div>
+  </nav>
+</header>
+
+<body>
+  <div class="container" style="background-color: black;">
+    <div class="row">
+      <div class="col-md-12 d-flex justify-content-center">
+        <div align="center" class="w-100 p-3" style="overflow-y: auto;">
+          <!-- contenido principal -->
+          <div class="w-100 text-center">
+            <h4>Nominales</h4>
+          </div>
+          <div class="pb-1">
+            <label>Ingrese Interes: </label>
+            <input type="number" id="tasaN1" placeholder="%%%">
+          </div>
+          <div class="pb-1">
+            Tipo de tasa
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="tipo_c"
+              id="periodoN1">
+              <option value="seleccione">Periodicidad</option>
+              <option value="M">Mensual</option>
+              <option value="B">Bimestral</option>
+              <option value="T">Trimestral</option>
+              <option value="C">Cuatrimestral</option>
+              <option value="S">Semestral</option>
+              <option value="A">Anual</option>
+            </select>
+          </div>
+          <div class="pb-1">
+            <input class="form-check-input" type="checkbox" value="" id="nominalA1">
+            <label class="form-check-label" for="nominalA">
               Anticipada
-          </label>
-      </div>
-    <div class="pb-1">
-      <button onClick="convertirTasa()" class="btn btn-primary">Convertir Tasa</button>
-    </div>
+            </label>
+          </div>
+          <div class="pb-1">
+            Tipo de tasa
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="tipo_c"
+              id="periodoN2">
+              <option value="seleccione">Periodicidad</option>
+              <option value="M">Mensual</option>
+              <option value="B">Bimestral</option>
+              <option value="T">Trimestral</option>
+              <option value="C">Cuatrimestral</option>
+              <option value="S">Semestral</option>
+              <option value="A">Anual</option>
+            </select>
+          </div>
+          <div class="pb-1">
+            <input class="form-check-input" type="checkbox" value="" id="nominalA2">
+            <label class="form-check-label" for="nominalA2">
+              Anticipada
+            </label>
+          </div>
+          <div class="pb-1">
+            <button onClick="convertirTasa()" class="btn btn-primary">Convertir Tasa</button>
+          </div>
 
-    <div class="pb-1">
-        <label>Tasa convertida: </label>
-        <label for="" id="tasaN2"></label>  
+          <div class="pb-1">
+            <label>Tasa convertida: </label>
+            <label for="" id="tasaN2"></label>
+          </div>
+
+          <!-- contenido principal -->
+        </div>
+      </div>
     </div>
-  
-    <!-- contenido principal -->
   </div>
 
+  <!--Bootstrap JS-->
   <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/sidebars.js"></script>
+  <!--My JS-->
+  <script src="./js/nominales.js"></script>
 </body>
+
+<footer class="mt-3 d-flex justify-content-center fixed-buttom">
+  <p class="text-white">&copy; Copyright 2023. Alex Perez, Daniel López, Maicol Moreno y Miguel Bonilla | Bogotá D.C -
+    Colombia</p>
+</footer>
 
 </html>

@@ -1,132 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reparto proporcional directo simple</title>
-    <link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!--My CSS-->
-    <link href="/src/css/index.css" rel="stylesheet">
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/rpds.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reparto Proporcional Directo Simple</title>
+
+  <!--Bootstrap CSS-->
+  <link rel="stylesheet" href="../assets/dist/css/bootstrap.min.css">
+  <!--Base CSS-->
+  <link rel="stylesheet" href="./css/base.css">
 </head>
+
 <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img width="28" height="28" src="https://img.icons8.com/fluency/96/stocks-growth.png" alt="stocks-growth" />
-          Ing. Económica
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle active" href="#" id="navbarRP" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Reparto proporcional
-              </a>
-              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarRP">
-                <li><a class="dropdown-item" href="/src/rpds.html">Reparto proporcional directo simple</a></li>
-                <li><a class="dropdown-item" href="/src/rpdc.html">Reparto proporcional directo compuesto</a></li>
-                <li><a class="dropdown-item" href="/src/rpis.html">Reparto proporcional inverso simple</a></li>
-                <li><a class="dropdown-item" href="/src/rpic.html">Reparto proporcional inverso compuesto</a></li>
-                <li><a class="dropdown-item" href="/src/rpm.html">Reparto proporcional mixto</a></li>
-              </ul>
-            </li>
-    
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarI" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Interes
-              </a>
-              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarI">
-                <li><a class="dropdown-item" href="/src/interesSimple.html">Interes simple</a></li>
-                <li><a class="dropdown-item" href="/src/interesCompuesto.html">Interes compuesto</a></li>
-              </ul>
-            </li>
-    
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarCT" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Conversión de tasas
-              </a>
-              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarCT">
-                <li><a class="dropdown-item" href="/src/nominalEfectiva.html">Nominal a Efectiva</a></li>
-                <li><a class="dropdown-item" href="/src/efectivaNominal.html">Evectiva a Nominal</a></li>
-                <li><a class="dropdown-item" href="/src/efectivas.html">Evectivas</a></li>
-                <li><a class="dropdown-item" href="/src/nominales.html">Nominales</a></li>
-              </ul>
-            </li>
-    
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarA" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Anualidades
-              </a>
-              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarA">
-                <li><a class="dropdown-item" href="/src/amortizacion.html">Amortización</a></li>
-                <li><a class="dropdown-item" href="/src/capitalizacion.html">Capitalización</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html">
+        <img width="28" height="28" src="https://img.icons8.com/fluency/96/stocks-growth.png" alt="stocks-growth" />
+        Ing. Económica
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="navbarRP" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Reparto proporcional
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarRP">
+              <li><a class="dropdown-item" href="rpds.html">Reparto proporcional directo simple</a></li>
+              <li><a class="dropdown-item" href="rpdc.html">Reparto proporcional directo compuesto</a></li>
+              <li><a class="dropdown-item" href="rpis.html">Reparto proporcional inverso simple</a></li>
+              <li><a class="dropdown-item" href="rpic.html">Reparto proporcional inverso compuesto</a></li>
+              <li><a class="dropdown-item" href="rpm.html">Reparto proporcional mixto</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarI" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Interes
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarI">
+              <li><a class="dropdown-item" href="interesSimple.html">Interes simple</a></li>
+              <li><a class="dropdown-item" href="interesCompuesto.html">Interes compuesto</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarCT" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Conversión de tasas
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarCT">
+              <li><a class="dropdown-item" href="nominalEfectiva.html">Nominal a Efectiva</a></li>
+              <li><a class="dropdown-item" href="efectivaNominal.html">Evectiva a Nominal</a></li>
+              <li><a class="dropdown-item" href="efectivas.html">Evectivas</a></li>
+              <li><a class="dropdown-item" href="nominales.html">Nominales</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarA" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Anualidades
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarA">
+              <li><a class="dropdown-item" href="amortizacion.html">Amortización</a></li>
+              <li><a class="dropdown-item" href="capitalizacion.html">Capitalización</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
+</header>
+
 <body>
-    <div class="container" style="background-color: black;">
-        <div class="row">
-          <div class="col-md-12 d-flex justify-content-center">
-            <div  align="center" class="w-100 p-3" style="overflow-y: auto;">
-                <div class="w-100 text-center">
-                  <h2 class="text-primary fw-bold">Reparto Proporcional Directo Simple</h2>
-                </div>
-                <div class="pb-1 text-white">
-                  <label >Persona 1:</label>
-                  <input type="number" placeholder="edad 1" id="edad1">
-                </div>
-                <div class="pb-1 text-white">
-                  <label>Persona 2:</label>
-                  <input type="number" placeholder="edad 2" id="edad2">
-                </div>
-                <div class="pb-1 text-white">
-                  <label>Persona 3:</label>
-                  <input type="number" placeholder="edad 3" id="edad3">
-                </div>
-                <div class="pb-1 text-white">
-                  <label>Cantidad: </label>
-                  <input type="number" id="cantidad">
-                </div>
-                <div class="pb-1 ">
-                  <button onClick="calcular_rs()" class="btn btn-success">Calcular Reparto Simple</button>
-                </div>
-                <div class="container-sm mt-4">
-                  <table class="table table-secondary">
-                    <thead>
-                      <tr class="table-dark">
-                        <th scope="col">Persona</th>
-                        <th scope="col">Edad</th>
-                        <th scope="col">FC</th>
-                        <th scope="col">Cociente</th>
-                      </tr>
-                    </thead>
-                    <tbody id="col1"></tbody>
-                    <tbody id="col2"></tbody>
-                    <tbody id="col3"></tbody>
-                    <tbody id="col4"></tbody>
-                  </table>
-                </div>
-              </div>
+  <div class="container" style="background-color: black;">
+    <div class="row">
+      <div class="col-md-12 d-flex justify-content-center">
+        <div align="center" class="w-100 p-3" style="overflow-y: auto;">
+          <div class="w-100 text-center">
+            <h4>Reparto Proporcional Directo Simple</h4>
+          </div>
+          <div class="pb-1">
+            <label>Persona 1:</label>
+            <input type="number" placeholder="edad 1" id="edad1">
+          </div>
+          <div class="pb-1">
+            <label>Persona 2:</label>
+            <input type="number" placeholder="edad 2" id="edad2">
+          </div>
+          <div class="pb-1">
+            <label>Persona 3:</label>
+            <input type="number" placeholder="edad 3" id="edad3">
+          </div>
+          <div class="pb-1">
+            <label>Cantidad: </label>
+            <input type="number" id="cantidad">
+          </div>
+          <div class="pb-1">
+            <button onClick="calcular_rs()" class="btn btn-primary">Calcular Reparto Simple</button>
+          </div>
+          <div class="container-sm mt-3">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Persona</th>
+                  <th scope="col">Edad</th>
+                  <th scope="col">FC</th>
+                  <th scope="col">Cociente</th>
+                </tr>
+              </thead>
+              <tbody id="col1"></tbody>
+              <tbody id="col2"></tbody>
+              <tbody id="col3"></tbody>
+              <tbody id="col4"></tbody>
+            </table>
           </div>
         </div>
+      </div>
     </div>
-    <script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
+  </div>
+
+  <!--Bootstrap JS-->
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  <!--My JS-->
+  <script src="./js/rpds.js"></script>
 </body>
-<footer class="mt-3 d-flex justify-content-center">
-    <p class="text-white">&copy; Copyright 2023. Alex Perez, Daniel López, Maicol Moreno y Miguel Bonilla | Bogotá D.C - Colombia</p>
-  </footer>
+
+<footer class="mt-3 d-flex justify-content-center fixed-buttom">
+  <p class="text-white">&copy; Copyright 2023. Alex Perez, Daniel López, Maicol Moreno y Miguel Bonilla | Bogotá D.C -
+    Colombia</p>
+</footer>
+
 </html>

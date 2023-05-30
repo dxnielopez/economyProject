@@ -180,7 +180,7 @@ function generarTabla() {
 }
 
 function mensaje() {
-	html = `<div class="alert alert-success alert-dismissible fade show" role="alert">
+	html = `<div class="alert alert-info alert-dismissible fade show" role="alert">
 				Se cancelarán ${periodo} cuotas, cada una por un valor de $ ${new Intl.NumberFormat().format(cuota)}.
 				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   			</div>`;

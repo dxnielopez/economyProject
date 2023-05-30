@@ -81,122 +81,71 @@
       </div>
     </nav>
   </header>
-  <div class="container">
+  <div class="container text-center">
 
-    <h1 class="h1 text-white fw-bold my-3">Amortizacion</h1>
+    <h1 class="h1 text-primary fw-bold my-3">Amortizacion</h1>
 
 
-    <form class="row g-3">
+    <div class="row g-3 my-5">
       <div class="col-md-4">
-        <label for="inputEmail4" class="form-label">Monto</label>
-        <input type="number" class="form-control" id="inputEmail4">
-      </div>
-      <div class="col-md-4">
-        <label for="inputPassword4" class="form-label">Numero de plazos</label>
-        <input type="number" class="form-control" id="inputPassword4">
+        <label for="monto" class="form-label text-white">Monto</label>
+        <input type="number" step="0.1" class="form-control" id="monto">
       </div>
       <div class="col-md-4">
-        <label for="inputPassword4" class="form-label">Tasa de interes</label>
-        <input type="number" class="form-control" id="inputPassword4">
-      </div>
-      <div class="col-12">
-        <label for="inputAddress" class="form-label">Address</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-      </div>
-      <div class="col-12">
-        <label for="inputAddress2" class="form-label">Address 2</label>
-        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-      </div>
-      <div class="col-md-6">
-        <label for="inputCity" class="form-label">City</label>
-        <input type="text" class="form-control" id="inputCity">
+        <label for="plazo" class="form-label text-white">Numero de plazos</label>
+        <input type="number" step="0.1" class="form-control" id="plazo">
       </div>
       <div class="col-md-4">
-        <label for="inputState" class="form-label">State</label>
-        <select id="inputState" class="form-select">
-          <option selected>Choose...</option>
-          <option>...</option>
+        <label for="tasa" class="form-label text-white">Tasa de interes</label>
+        <input type="number" step="0.1" class="form-control" id="tasa">
+      </div>
+
+      <div class="col-md-4">
+        <label for="tipo_p" class="form-label text-white">Tipo de plazo</label>
+        <select class="form-select" name="tipo_p" id="tipo_p">
+          <option value="seleccione">Seleccione que modalidad de pago que utiliza</option>
+          <option value="M">Meses</option>
+          <option value="B">Bimestres</option>
+          <option value="T">Trimestres</option>
+          <option value="C">Cuatrimestrres</option>
+          <option value="S">Semestres</option>
+          <option value="A">Años</option>
         </select>
       </div>
-      <div class="col-md-2">
-        <label for="inputZip" class="form-label">Zip</label>
-        <input type="text" class="form-control" id="inputZip">
+      <div class="col-md-4">
+        <label for="tipo_i" class="form-label text-white">Tipo de interes</label>
+        <select class="form-select" name="tipo_i" id="tipo_i">
+          <option value="seleccione">Seleccione el tipo de interes que quieres</option>
+          <option value="Ef_M">Efectivo mensual</option>
+          <option value="Ef_B">Efectivo bimestral</option>
+          <option value="Ef_T">Efectivo trimestral</option>
+          <option value="Ef_C">Efectivo cuatrimestral</option>
+          <option value="Ef_S">Efectivo semestral</option>
+          <option value="Ef_A">Efectivo anual</option>
+          <option value="N_M">Anual Nominal mensual</option>
+          <option value="N_B">Anual Nominal bimestral</option>
+          <option value="N_T">Anual Nominal trimestral</option>
+          <option value="N_S">Anual Nominal semestrals</option>
+          <option value="N_A">Anual Nominal anual</option>
+        </select>
       </div>
-      <div class="col-12">
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="gridCheck">
-          <label class="form-check-label" for="gridCheck">
-            Check me out
-          </label>
-        </div>
+      <div class="col-md-4">
+        <label for="tipo_a" class="form-label text-white">Tipo de plazo</label>
+        <select class="form-select" name="tipo_a" id="tipo_a">
+          <option value="seleccione">Anticipada</option>
+          <option value="Si">Si</option>
+          <option value="No">No</option>
+        </select>
       </div>
-      <div class="col-12">
-        <button onClick="calcular()" class="btn btn-primary">Generar tabla</button>
+      <div class="col-12 my-3">
+        <button onClick="calcular()" class="btn btn-success">Generar tabla</button>
       </div>
-    </form>
-
-
-
-    <div class="pb-1">
-      <label>Monto:</label>
-      <input type="number" id="monto">
-    </div>
-
-    <div class="pb-1">
-      <label>(n)Plazo de la deuda: Digite el tiempo exacto convertido en meses,trimestres,etc</label><br>
-      <input type="number" id="plazo" placeholder='Numero del plazo'>
-    </div>
-    <div class="pb-1">
-      Tipo de plazo(La unidad del numero que digito anteriormente)
-      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="tipo_p" id="tipo_p">
-        <option value="seleccione">Seleccione que modalidad de pago que utiliza</option>
-        <option value="M">Meses</option>
-        <option value="B">Bimestres</option>
-        <option value="T">Trimestres</option>
-        <option value="C">Cuatrimestrres</option>
-        <option value="S">Semestres</option>
-        <option value="A">Años</option>
-      </select>
-    </div>
-    ____________________________________________________________________________
-    <div class="pb-1">
-      <label>Tasa de interes:</label>
-      <input type="number" id="tasa" placeholder="Numero del interes">
-    </div>
-    <div class="pb-1">
-      Tipo de interes
-      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="tipo_i" id="tipo_i">
-        <option value="seleccione">Seleccione el tipo de interes que quieres</option>
-        <option value="Ef_M">Efectivo mensual</option>
-        <option value="Ef_B">Efectivo bimestral</option>
-        <option value="Ef_T">Efectivo trimestral</option>
-        <option value="Ef_C">Efectivo cuatrimestral</option>
-        <option value="Ef_S">Efectivo semestral</option>
-        <option value="Ef_A">Efectivo anual</option>
-        <option value="N_M">Anual Nominal mensual</option>
-        <option value="N_B">Anual Nominal bimestral</option>
-        <option value="N_T">Anual Nominal trimestral</option>
-        <option value="N_S">Anual Nominal semestrals</option>
-        <option value="N_A">Anual Nominal anual</option>
-      </select>
-    </div>
-    <div class="pb-1">
-      ¿El tipo de interes que usa es anticipado?
-      <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="tipo_a" id="tipo_a">
-        <option value="seleccione">Seleccione si es anticipada</option>
-        <option value="Si">Si</option>
-        <option value="No">No</option>
-      </select>
-    </div>
-
-    <div class="pb-1">
-      <button onClick="calcular()" class="btn btn-primary">Generar tabla de amortizacion</button>
     </div>
 
     <div class="container-sm mt-3">
       <div id="mensaje"></div>
-      <table class="table table-dark table-striped">
-        <thead>
+      <table class="table table-light table-striped table-hover">
+        <thead class="table-dark">
           <tr>
             <th scope="col">#</th>
             <th scope="col">Saldo</th>

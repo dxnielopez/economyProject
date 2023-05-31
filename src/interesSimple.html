@@ -82,59 +82,59 @@
 
 <body>
   <div class="container" style="background-color: black;">
-    <div class="row">
-      <div class="col-md-12 d-flex justify-content-center">
-        <div align="center" class="w-100 p-3" style="overflow-y: auto;">
-          <div class="w-100 text-center">
-            <h4>Interes Simple</h4>
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-12 d-flex justify-content-center my-3">
+        <h1 class="text-primary fw-bold">Interes Simple</h1>
+      </div>
+    </div>
+    
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-6">
+        <div class="row g-3">
+          <div class="col-md-3 d-flex align-items-center">
+            <label class="form-label text-white m-0">Ingrese Capital:</label>
           </div>
-          <div class="pb-1">
-            <label>Ingrese Capital: </label>
-            <input type="number" id="capital" placeholder="$$$">
+          <div class="col-md-9">
+            <input type="number" class="form-control form-control-sm" id="capital" placeholder="$$$">
           </div>
-          <div class="pb-1">
-            <label>Ingrese Interes: </label>
-            <input type="number" id="tinteres" placeholder="%%%">
+
+          <div class="col-md-3 d-flex align-items-center">
+            <label class="form-label text-white m-0">Ingrese Interes:</label>
           </div>
-          <div class="pb-1">
-            <label>Ingrese tiempo: </label>
-            <input type="number" id="tiempo" placeholder="###">
-            <!-- <input type="month" id="tiempo"> -->
+          <div class="col-md-9">
+            <input type="number" class="form-control form-control-sm" id="tinteres" placeholder="%%%">
           </div>
-          <!-- <div class="container-sm mt-3">
-                        <table class="table">
-                          <thead>
-                            <tr>
-                              <th scope="col">Persona</th>
-                              <th scope="col">Edad</th>
-                              <th scope="col">Inverso</th>
-                              <th scope="col">Indice</th>
-                              <th scope="col">FC</th>
-                              <th scope="col">Cociente</th>
-                            </tr>
-                          </thead>
-                          <tbody id="col1">
-                            <th><label for="">A</label></th>
-                            <th><input type="number" placeholder="###" id="edad1"></th>
-                          </tbody>
-                          <tbody id="col2">
-                            <th><label for="">B</label></th>
-                            <th><input type="number" placeholder="###" id="edad2"></th>
-                          </tbody>
-                          <tbody id="col3"></tbody>
-                          <tbody id="col4"></tbody>
-                        </table>
-                      </div> -->
-          <div class="pb-1">
-            <button onClick="calcular_i()" class="btn btn-primary">Calcular Interes Simple</button>
+
+          <div class="col-md-3 d-flex align-items-center">
+            <label class="form-label text-white m-0">Ingrese tiempo:</label>
           </div>
-          <div class="pb-1">
-            <label>Interes Bancario: </label>
-            <label for="" id="interes"></label>
+          <div class="col-md-9">
+            <input type="number" class="form-control form-control-sm" id="tiempo" placeholder="###">
           </div>
-          <div class="pb-1">
-            <label>Interes Racional: </label>
-            <label for="" id="interesr"></label>
+
+          <div class="col-md-12 d-flex justify-content-center mt-4">
+            <button onClick="calcular_i()" class="btn btn-success">Calcular</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row d-flex justify-content-center mt-5">
+      <div class="col-md-6">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-4">
+            <strong class="text-white">Interes Bancario: </strong>
+          </div>
+          <div class="col-md-8">
+            <p class="text-white" id="interes"></p>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-center mt-2">
+          <div class="col-md-4">
+            <strong class="text-white">Interes Racional: </strong>
+          </div>
+          <div class="col-md-8">
+            <p class="text-white" id="interesr"></p>
           </div>
         </div>
       </div>
@@ -143,6 +143,8 @@
 
   <!--Bootstrap JS-->
   <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  <!--Jquery-->
+  <script src="./js/jquery-3.6.0.min.js"></script>
   <!--My JS-->
   <script src="./js/interesSimple.js"></script>
 </body>

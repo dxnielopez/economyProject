@@ -13,3 +13,22 @@ body {
 footer {
     background-color: black;
 }
+
+.tooltip-inner {
+    color: black;
+    background-color: #f8f9fa;
+    box-shadow: 0px 0px 4px black;
+    opacity: 1 !important;
+}
+.tooltip.bs-tooltip-right .tooltip-arrow::before {
+    border-right-color: #f8f9fa !important;
+}
+.tooltip.bs-tooltip-left .tooltip-arrow::before {
+    border-left-color: #f8f9fa !important;
+}
+.tooltip.bs-tooltip-bottom .tooltip-arrow::before {
+    border-bottom-color: #f8f9fa !important;
+}
+.tooltip.bs-tooltip-top .tooltip-arrow::before {
+    border-top-color: #f8f9fa !important;
+}

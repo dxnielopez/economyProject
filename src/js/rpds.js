@@ -19,7 +19,7 @@ function col1(){
 	html = "";
 	if(edads > 0 ){
 		cociente = parseFloat((cantidad*edad1)/edads)
-		html += `<tr>
+		html += `<tr class="table-light">
 					<td>${new Intl.NumberFormat().format(persona)}</td>
 					<td>${new Intl.NumberFormat().format(edad1)}</td>
 					<td>${new Intl.NumberFormat().format(fc)}</td>
@@ -36,7 +36,7 @@ function col2(){
 	html = "";
 	if(edads > 0 ){
 		cociente = parseFloat((cantidad*edad2)/edads)
-		html += `<tr>
+		html += `<tr class="table-light">
 					<td>${new Intl.NumberFormat().format(persona)}</td>
 					<td>${new Intl.NumberFormat().format(edad2)}</td>
 					<td>${new Intl.NumberFormat().format(fc)}</td>
@@ -52,7 +52,7 @@ function col3(){
 	html = "";
 	if(edads > 0 ){
 		cociente = parseFloat((cantidad*edad3)/edads)
-		html += `<tr>
+		html += `<tr class="table-light">
 					<td>${new Intl.NumberFormat().format(persona)}</td>
 					<td>${new Intl.NumberFormat().format(edad3)}</td>
 					<td>${new Intl.NumberFormat().format(fc)}</td>
@@ -64,10 +64,10 @@ function col3(){
 }
 
 function col4(){
-    persona = "total"
+    persona = "Total"
 	html = "";
 	if(edads > 0 ){
-		html += `<tr>
+		html += `<tr class="table-light">
                     <td>${persona}</td>
 					<td>${new Intl.NumberFormat().format(edads)}</td>
 					<td>${new Intl.NumberFormat().format(fc)}</td>

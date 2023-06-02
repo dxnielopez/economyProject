@@ -1,5 +1,6 @@
 var edad1,edad2,edad3,cantidad,suma,edads,fc,cociente,cociente2,cociente3
 var persona,mcm,MCM,edad1Inv,edad2Inv,edad3Inv,Inverso
+
 function calcular_rs(){
    edad1 = $("#edad1").val()
    edad2 = $("#edad2").val()
@@ -17,7 +18,6 @@ function calcular_rs(){
     col3()
     col4()
 }
-
 
 const maximoComunDivisor = (a, b) => {
     let temporal

@@ -1,67 +1,46 @@
-var aporte1, aporte2, aporte3
-var tiempo1, tiempo2, tiempo3
-var producto1, producto2, producto3
-var indice1, indice2, indice3, indicet
-var fc, cociente, persona, cantidad
-function calcular_rc(){
-   aporte1 = $("#aporte1").val()
-   aporte2 = $("#aporte2").val()
-   aporte3 = $("#aporte3").val()
+var edad1,edad2,edad3,edad4,cantidad,suma,edads,fc,cociente,cociente2,cociente3,cociente4
+var persona,mcm,MCM,tiempo1,tiempo2,tiempo3,tiempo4
+var edtiempo1,edtiempo2,edtiempo3,edtiempo4
+function calcular_rs(){
+   edad1 = $("#edad1").val()
+   edad2 = $("#edad2").val()
+   edad3 = $("#edad3").val()
+   edad4 = $("#edad4").val()
 
    tiempo1 = $("#tiempo1").val()
    tiempo2 = $("#tiempo2").val()
    tiempo3 = $("#tiempo3").val()
-
-   producto1 = $("#producto1").val()
-   producto2 = $("#producto2").val()
-   producto3 = $("#producto3").val()
+   tiempo4 = $("#tiempo4").val()
 
    cantidad = $("#cantidad").val()
+   edtiempo1 = (parseInt(edad1) * parseInt(tiempo1))
+   edtiempo2 = (parseInt(edad2) * parseInt(tiempo2))
+   edtiempo3 = (parseInt(edad3) * parseInt(tiempo3))
+   edtiempo4 = (parseInt(edad4) * parseInt(tiempo4))
 
-    
-    if(producto1 > 0){
-        indice1 = producto1[0] + producto1[1]
-        console.log("producto 1: ",producto1)
-    }else{
-        console.log("error no se ha ingresado el dato especificado")
-    }
-    if(producto2 > 0){
-        indice2 = producto2[0] + producto2[1]
-        console.log("producto 2: ",producto2)
-    }else{
-        console.log("error no se ha ingresado el dato especificado")
-    }
-    if(producto3 > 0){
-        indice3 = producto3[0] + producto3[1]
-        console.log("producto 3: ",producto3)
-    }else{
-        console.log("error no se ha ingresado el dato especificado")
-    }      
-    
-    indicet = parseFloat(indice1) + parseFloat(indice2) + parseFloat(indice3)
-    console.log("total indice: ",indicet)
-    fc = parseFloat(cantidad/indicet)
-     col1()
-     col2()
-     col3()
-    // col4()
-
+   edads =  edtiempo1 + edtiempo2 + edtiempo3 + edtiempo4
+  
+   
+   fc = parseFloat(cantidad/edads)
+   console.log(fc)
+    col1()
+    col2()
+    col3()
+    col4()
+    col5()
 }
 
 function col1(){
-    persona = "A"
+    persona = 1 
 	html = "";
-	if(indice1 > 0 && aporte1 > 0 ){
-        cociente = parseFloat((cantidad*indice1)/indicet)
-		html += `<tr>
-                    <td>${persona}</td>
-					<td>${new Intl.NumberFormat().format(aporte1)}</td>
-					<td>${new Intl.NumberFormat().format(tiempo1)}</td>
-					<td>${new Intl.NumberFormat().format(producto1)}</td>
-					<td>${new Intl.NumberFormat().format(indice1)}</td>
-                    <td>${new Intl.NumberFormat().format(fc)}</td>
-                    <td>${new Intl.NumberFormat().format(cociente)}</td>
-					
+	if(edads > 0 ){
+		cociente = parseFloat(fc*edtiempo1)
+		html += `<tr class="table-light">
+					<td>${new Intl.NumberFormat().format(persona)}</td>
+					<td>${new Intl.NumberFormat().format(edad1)}</td>
+                    <td>${new Intl.NumberFormat().format(tiempo1)}</td>
+					<td>${new Intl.NumberFormat().format(fc)}</td>
+					<td>${new Intl.NumberFormat().format(cociente)}</td>					
 				</tr>`;	
         	
 	}
@@ -69,54 +48,70 @@ function col1(){
 }
 
 function col2(){
-    persona = "B" 
+    persona = 2 
 	html = "";
-	if(indice2 > 0 && aporte2 > 0 ){
-        cociente = parseFloat((cantidad*indice2)/indicet)
-		html += `<tr>
-                    <td>${persona}</td>
-                    <td>${new Intl.NumberFormat().format(aporte2)}</td>
+	if(edads > 0 ){
+		cociente2 = parseFloat(fc*edtiempo2)
+		html += `<tr class="table-light">
+					<td>${new Intl.NumberFormat().format(persona)}</td>
+					<td>${new Intl.NumberFormat().format(edad2)}</td>
                     <td>${new Intl.NumberFormat().format(tiempo2)}</td>
-                    <td>${new Intl.NumberFormat().format(producto2)}</td>
-                    <td>${new Intl.NumberFormat().format(indice2)}</td>
-                    <td>${new Intl.NumberFormat().format(fc)}</td>
-                    <td>${new Intl.NumberFormat().format(cociente)}</td>
+					<td>${new Intl.NumberFormat().format(fc)}</td>
+					<td>${new Intl.NumberFormat().format(cociente2)}</td>
 					
 				</tr>`;	
 	}
 	$("#col2").html(html);
 }
 
+
 function col3(){
-    persona = "C" 
+    persona = 3 
 	html = "";
-	if(indice3 > 0 && aporte3 > 0  ){
-        cociente = parseFloat((cantidad*indice3)/indicet)
-		html += `<tr>
-                    <td>${persona}</td>
-                    <td>${new Intl.NumberFormat().format(aporte3)}</td>
+	if(edads > 0 ){
+		cociente3 = parseFloat(fc*edtiempo3)
+		html += `<tr class="table-light">
+					<td>${new Intl.NumberFormat().format(persona)}</td>
+					<td>${new Intl.NumberFormat().format(edad3)}</td>
                     <td>${new Intl.NumberFormat().format(tiempo3)}</td>
-                    <td>${new Intl.NumberFormat().format(producto3)}</td>
-                    <td>${new Intl.NumberFormat().format(indice3)}</td>
-                    <td>${new Intl.NumberFormat().format(fc)}</td>
-                    <td>${new Intl.NumberFormat().format(cociente)}</td>
+					<td>${new Intl.NumberFormat().format(fc)}</td>
+					<td>${new Intl.NumberFormat().format(cociente3)}</td>
 					
 				</tr>`;	
 	}
 	$("#col3").html(html);
 }
 
-// function col4(){
-//     persona = "total"
-// 	html = "";
-// 	if(edads > 0 ){
-// 		html += `<tr>
-//                     <td>${persona}</td>
-// 					<td>${new Intl.NumberFormat().format(edads)}</td>
-// 					<td>${new Intl.NumberFormat().format(fc)}</td>
-// 					<td>${new Intl.NumberFormat().format(cantidad)}</td>
+function col4(){
+    persona = 4
+	html = "";
+	if(edads > 0 ){
+        cociente4 = parseFloat(fc*edtiempo4)
+		html += `<tr class="table-light">
+                    <td>${persona}</td>
+					<td>${new Intl.NumberFormat().format(edad4)}</td>
+                    <td>${new Intl.NumberFormat().format(tiempo4)}</td>
+					<td>${new Intl.NumberFormat().format(fc)}</td>
+					<td>${new Intl.NumberFormat().format(cociente4)}</td>
 					
-// 				</tr>`;	
-// 	}
-// 	$("#col4").html(html);
-// }
+				</tr>`;	
+	}
+	$("#col4").html(html);
+}
+
+function col5(){
+    persona = "Total"
+	html = "";
+	if(edads > 0 ){
+        var cocienteTotal = cociente + cociente2 + cociente3 + cociente4
+		html += `<tr class="table-light">
+                    <td>${persona}</td>
+					<td>${new Intl.NumberFormat().format(edads)}</td>
+                    <td>${new Intl.NumberFormat().format(edads)}</td>
+					<td>${new Intl.NumberFormat().format(fc)}</td>
+					<td>${new Intl.NumberFormat().format(cocienteTotal)}</td>
+					
+				</tr>`;	
+	}
+	$("#col5").html(html);
+}

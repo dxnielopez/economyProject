@@ -85,125 +85,109 @@
     <div class="row d-flex justify-content-center">
       <div class="col-md-12 d-flex justify-content-center my-3">
         <!--<div id="mensaje" class="alert alert-warning alert-dismissable"></div>-->
-        <h4 class="text-primary fw-bold">INTERES COMPUESTO</h4>
+        <h1 class="text-primary fw-bold">Interes Compuesto</h1>
       </div>
     </div>
 
-    <div class="row d-flex justify-content-center">
+    <div class="row">
       <div class="col-md-12 d-flex justify-content-center">
         <p class="text-secondary">Deje la casilla vacia del dato que quiere encontrar ya se ha monto o capital</p>
       </div>
-      <div class="col-md-8">
-        <div class="row g-3">
-          <div class="col-md-1 d-flex justify-content-center align-items-center">
-            <label class="form-label text-white m-0">Monto:</label>
-          </div>
-          <div class="col-md-4 d-flex align-items-center">
-            <input type="number" class="form-control form-control-sm" id="monto">
-          </div>
-          <div class="col-md-2 d-flex justify-content-center align-items-center">
-            <p class="text-white fw-bold m-0">ó</p>
-          </div>
-          <div class="col-md-1 d-flex justify-content-center align-items-center">
-            <label class="form-label text-white m-0">Capital:</label>
-          </div>
-          <div class="col-md-4 d-flex align-items-center">
-            <input type="number" class="form-control form-control-sm" id="capital">
-          </div>
+      <div class="col-md-12 d-flex justify-content-center">
+        <label class="col-sm-1 col-form-label text-white m-0">Monto:</label>
+        <div class="col-md-2">
+          <input type="number" class="form-control form-control-sm" id="monto">
+        </div>
+        <label class="col-sm-2 col-form-label d-flex justify-content-center text-white fw-bold m-0">ó:</label>
+        <label class="col-sm-1 col-form-label text-white m-0">Capital:</label>
+        <div class="col-md-2 d-flex align-items-center">
+          <input type="number" class="form-control form-control-sm" id="capital">
         </div>
       </div>
     </div>
 
-    <div class="row d-flex justify-content-center mt-3 g-3">
-      <div class="col-md-1 d-flex justify-content-center align-items-center">
-        <label class="form-label text-white m-0">Numero de plazo:</label>
-      </div>
-      <div class="col-md-3 d-flex justify-content-center align-items-center">
-        <img width="24" height="24" src="https://img.icons8.com/color/96/info--v1.png" class="me-2"
-        data-bs-toggle="tooltip" data-bs-placement="left"
-        title="Plazo de la deuda (n): Digite el tiempo exacto convertido en meses,trimestres,etc"/>
-        <input type="number" class="form-control form-control-sm" id="plazo" placeholder='Numero del plazo'>
-      </div>
-      <div class="col-md-1 d-flex justify-content-center align-items-center">
-        <label class="form-label text-white m-0">Periodicidad:</label>
-      </div>
-      <div class="col-md-3 d-flex justify-content-center align-items-center">
-        <img width="24" height="24" src="https://img.icons8.com/color/96/info--v1.png" class="me-2"
-        data-bs-toggle="tooltip" data-bs-placement="left"
-        title="Tipo de plazo(La unidad del numero que digito anteriormente)"/>
-        <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="tipo_p" id="tipo_p">
-          <option value="seleccione">Seleccione</option>
-          <option value="M">Meses</option>
-          <option value="B">Bimestres</option>
-          <option value="T">Trimestres</option>
-          <option value="C">Cuatrimestrres</option>
-          <option value="S">Semestres</option>
-          <option value="A">Años</option>
-        </select>
-      </div>
-    </div>
-    
-    <div class="row d-flex justify-content-center mt-3 g-3">
-      <div class="col-md-1 d-flex justify-content-center align-items-center">
-        <label class="form-label text-white m-0">Tasa de interes:</label>
-      </div>
-      <div class="col-md-3 d-flex justify-content-center align-items-center">
-        <input type="number" class="form-control form-control-sm" id="tasa" placeholder="Numero del interes">
-      </div>
-      
-      <div class="col-md-1 d-flex justify-content-center align-items-center">
-        <label class="form-label text-white m-0">Tipo de interes:</label>
-      </div>
-      <div class="col-md-3 d-flex justify-content-center align-items-center">
-        <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="tipo_i" id="tipo_i">
-          <option value="seleccione">Seleccione el tipo de interes que quieres</option>
-          <option value="Ef_M">Efectivo mensual</option>
-          <option value="Ef_B">Efectivo bimestral</option>
-          <option value="Ef_T">Efectivo trimestral</option>
-          <option value="Ef_C">Efectivo cuatrimestral</option>
-          <option value="Ef_S">Efectivo semestral</option>
-          <option value="Ef_A">Efectivo anual</option>
-          <option value="N_M">Anual Nominal mensual</option>
-          <option value="N_B">Anual Nominal bimestral</option>
-          <option value="N_T">Anual Nominal trimestral</option>
-          <option value="N_S">Anual Nominal semestrals</option>
-          <option value="N_A">Anual Nominal anual</option>
-        </select>
-      </div>
-      
-      <div class="col-md-1 d-flex justify-content-center align-items-center">
-        <label class="form-label text-white m-0">¿Interes anticipado?</label>
-      </div>
-      <div class="col-md-3 d-flex justify-content-center align-items-center">
-        <input class="form-check-input" type="checkbox" id="tipo_a" checked>
+    <div class="row d-flex justify-content-center align-items-center mt-3">
+      <label class="col-sm-1 col-form-label text-white m-0">Periodo:</label>
+      <div class="col-md-3">
+        <div class="input-group">
+          <input type="number" class="form-control form-control-sm w-50" id="plazo" required>
+          <select class="form-select form-select-sm" name="tipo_p" id="tipo_p" required>
+            <option value="seleccione">Select</option>
+            <option value="M">Meses</option>
+            <option value="B">Bimestres</option>
+            <option value="T">Trimestres</option>
+            <option value="C">Cuatrimestrres</option>
+            <option value="S">Semestres</option>
+            <option value="A">Años</option>
+          </select>
+        </div>
       </div>
     </div>
 
-    <div class="col-md-12 d-flex justify-content-center">
-      <div class="pb-1">
+    <div class="row d-flex justify-content-center align-items-center mt-3">
+      <label class="col-sm-1 col-form-label text-white m-0">Tasa de interes:</label>
+      <div class="col-md-3">
+        <div class="input-group">
+          <input type="number" class="form-control form-control-sm w-50" id="tasa" required>
+          <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="tipo_i" id="tipo_i" required>
+            <option value="seleccione">Select</option>
+            <option value="Ef_M">Efectivo mensual</option>
+            <option value="Ef_B">Efectivo bimestral</option>
+            <option value="Ef_T">Efectivo trimestral</option>
+            <option value="Ef_C">Efectivo cuatrimestral</option>
+            <option value="Ef_S">Efectivo semestral</option>
+            <option value="Ef_A">Efectivo anual</option>
+            <option value="N_M">Nominal mensual</option>
+            <option value="N_B">Nominal bimestral</option>
+            <option value="N_T">Nominal trimestral</option>
+            <option value="N_S">Nominal semestrals</option>
+            <option value="N_A">Nominal anual</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="row d-flex justify-content-center align-items-center mt-3">
+      <div class="col-md-3 d-flex justify-content-center">
+        <label class="form-label text-white me-3">¿Interes anticipado?:</label>
+        <input class="form-check-input" type="checkbox" id="tipo_a">
+      </div>
+    </div>
+
+    <div class="row d-flex justify-content-center mt-3">
+      <div class="col-md-6 d-flex justify-content-end">
         <button onClick="calcularCapital()" class="btn btn-success">Calcular Capital Inicial</button>
+      </div>
+      <div class="col-md-6 d-flex justify-content-star">
         <button onClick="calcularMonto()" class="btn btn-success">Calcular Monto</button>
       </div>
     </div>
+    
+    <div class="row d-flex justify-content-center mt-4">
+      <div class="col-md-6">
+        <div class="alert alert-success d-flex align-items-center" role="alert" id="myAlert" style="display: none !important;">
+          <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+            <use xlink:href="#check-circle-fill" />
+          </svg>
+          <div id="mensaje"></div>
+        </div>
+      </div>
+    </div>
 
-    <div id="mensaje"></div>
-  </div>
-  </div>
-  </div>
+    <!--Icon Alert-->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+        <path
+          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+      </symbol>
+    </svg>
 
-  <!--Bootstrap JS-->
-  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-  <!--Jquery-->
-  <script src="./js/jquery-3.6.0.min.js"></script>
-  <!--My JS-->
-  <script src="./js/interesCompuesto.js"></script>
-  <!--Tooltip-->
-  <script>
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-      return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
-  </script>
+    <!--Bootstrap JS-->
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Jquery-->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <!--My JS-->
+    <script src="./js/interesCompuesto.js"></script>
 </body>
 
 <footer class="mt-3 d-flex justify-content-center fixed-buttom">
